@@ -1,4 +1,5 @@
 <?php
+ = ""; // Add your Recaptcha Secret
 if(isset($_POST['username']) && isset($_POST['Passwd']) && isset($_POST['PasswdAgain']) && isset($_POST['loc']) && isset($_POST['Birthday'])) {
     echo("true");
 }
@@ -13,7 +14,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,"https://www.google.com/recaptcha/api/siteverify");
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS,
-            "secret=6Ld3Ja8bAAAAAMYVps2qP2D4RR7STC0aLPgmI5UP&response=$cresponse");
+            "secret=" . $recaptchSecret . "&response=$cresponse");
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 

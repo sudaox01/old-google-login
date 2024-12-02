@@ -1,5 +1,5 @@
 <?php
- = ""; // Add your Recaptcha Secret
+$recaptchSecret = ""; // Add your Recaptcha Secret
 if(isset($_POST['username']) && isset($_POST['Passwd']) && isset($_POST['PasswdAgain']) && isset($_POST['loc']) && isset($_POST['Birthday'])) {
     echo("true");
 }
